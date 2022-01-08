@@ -1,8 +1,8 @@
-namespace: default-microservice-namespace
+namespace: koios
 resources:
   - ./namespace.yaml
   - ./ingress.yaml
-  - ./otel
+  - ./jaeger
   - ./cronjobs
   - ./mq
   - ./sql

@@ -1,5 +1,0 @@
-resources:
-  - ./config-map.yaml
-  - ./service.yaml
-  - ./daemon-set.yaml
-  - ./deployment.yaml

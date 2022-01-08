@@ -4,6 +4,10 @@
 
 This holds all of the services, cron, and async systems that make up Koios
 
+## K9s Dashboard
+
+![](https://imgur.com/n6vJZW7.png)
+
 ## Development Flow
 
 ```sh

@@ -72,8 +72,9 @@ current weather and some queries about historical weather.
 
 ## K9s Dashboard
 
-![](https://imgur.com/n6vJZW7.png)
+![Pods](https://imgur.com/n6vJZW7.png)
 
+![Weather Service Consuming Jobs from Cronjob](https://imgur.com/8mJZLRM.png)
 ## Development Flow
 
 ```sh

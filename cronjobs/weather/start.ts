@@ -1,11 +1,12 @@
 import Log from './log'
+import * as API from './api'
 import * as Publish from './publish'
 
 const main = async () => {
   await Publish.starting()
-  // const weather = await API.getCurrentWeather()
-  // Log.trace({ weather })
-  // await Publish.currentWeather(weather as any)
+  const weather = await API.getCurrentWeather()
+  Log.trace({ weather })
+  await Publish.currentWeather(weather as any)
   await Publish.finished()
 }
 

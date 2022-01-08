@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: weather
+  name: weather
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: weather
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: weather
+    spec:
+      containers:
+      - image: microservice-monorepo-services-weather
+        name: services-weather
+        env:
+          - name: ENVIRONMENT
+            value: development
+          - name: JWT_SECRET_TOKEN
+            value: "some secret value"
+          - name: DB_HOST
+            value: $(POSTGRES_SERVICE_HOST)
+          - name: DB_PORT
+            value: $(POSTGRES_SERVICE_PORT)
+          - name: DB_USER
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: POSTGRES_USER
+          - name: DB_PASS
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: POSTGRES_PASSWORD
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: POSTGRES_DB
+          - name: MQ_URL
+            value: guest:guest@$(RABBITMQ_SERVICE_HOST):$(RABBITMQ_SERVICE_PORT)
+          - name: MQ_EXCHANGE
+            value: sensor-data
+        ports:
+        - containerPort: 3000
+          protocol: TCP

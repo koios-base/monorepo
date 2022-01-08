@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e;
+
+echo "🚚 Building and tagging current folders inside of ./cronjobs"
+
+echo ""
+
+for CRONJOB in $(ls cronjobs); do
+  echo "ℹ️  Building $CRONJOB"
+  echo ""
+  ./scripts/build cronjobs "$CRONJOB"
+  echo ""
+  echo "ℹ️  $CRONJOB built"
+done

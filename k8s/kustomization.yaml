@@ -1,0 +1,9 @@
+namespace: default-microservice-namespace
+resources:
+  - ./namespace.yaml
+  - ./ingress.yaml
+  - ./otel
+  - ./cronjobs
+  - ./mq
+  - ./sql
+  - ./weather

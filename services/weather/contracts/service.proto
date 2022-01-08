@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "src/protos;service";
+
+package weather.api;
+
+import "google/api/annotations.proto";
+
+service WeatherAPI {
+  rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {
+    option (google.api.http) = {
+      post : "/hello",
+      body : "*"
+    };
+  };
+}
+
+message SayHelloRequest { string name = 1; }
+
+message SayHelloResponse { string response = 1; }

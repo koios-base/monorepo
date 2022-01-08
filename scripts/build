@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker build -t microservice-monorepo-$1-$2 ./$1/$2

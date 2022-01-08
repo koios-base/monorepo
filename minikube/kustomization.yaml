@@ -1,0 +1,9 @@
+resources:
+  # the base of everything is the k8s folder
+  # everthing in here is an "overlay"
+  - ../k8s
+
+patchesStrategicMerge:
+  - ./patches/services/weather.yaml
+  - ./patches/cronjobs/weather.yaml
+  - ./patches/ingress.yaml

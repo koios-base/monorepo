@@ -1,0 +1,37 @@
+openapi: 3.0.3
+info:
+  title: WeatherAPI
+  version: 1.0.0
+  description: ""
+paths:
+  /weather.api.WeatherAPI/SayHello:
+    post:
+      summary: ""
+      operationId: WeatherAPI_SayHello
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SayHelloRequest"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SayHelloResponse"
+components:
+  schemas:
+    SayHelloRequest:
+      properties:
+        name:
+          type: string
+          description: ""
+      description: ""
+    SayHelloResponse:
+      properties:
+        response:
+          type: string
+          description: ""
+      description: ""

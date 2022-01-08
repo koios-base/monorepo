@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e;
+
+SYSTEMS=("cronjobs" "services")
+
+for SYSTEM in $SYSTEMS; do
+  echo "Building $SYSTEM"
+  ./scripts/build-$SYSTEM
+  echo "$SYSTEM built"
+  echo ""
+done

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e;
+
+echo "🚚 Building and tagging current folders inside of ./services"
+
+echo ""
+
+for SERVICE in $(ls services); do
+  echo "ℹ️  Building $SERVICE"
+  echo ""
+  ./scripts/build services "$SERVICE"
+  echo ""
+  echo "ℹ️  $SERVICE built"
+done

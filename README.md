@@ -54,6 +54,8 @@ eval $(minikube -p minikube docker-env)
 >
 > 192.168.49.2 weather.local-demo
 
+You can import the working Insomnia collection to make HTTP requests
+
 _**services/weather**_: http://weather.local-demo
 
 ### Mongo Admin

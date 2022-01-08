@@ -24,7 +24,7 @@ minikube start
 # YOU MUST DO THIS BEFORE ANYTHING ELSE
 # AND YOU MUST DO IT IN EACH TERMINAL YOU
 # WANT TO RUN IT IN
-eval $(minikube -p minikube docker-env)
+eval $(minikube docker-env)
 
 # Add the ingress addon
 minikube addons enable ingress
@@ -74,14 +74,14 @@ current weather and some queries about historical weather.
 
 ![Pods](https://imgur.com/n6vJZW7.png)
 
-![Weather Service Consuming Jobs from Cronjob](https://imgur.com/8mJZLRM.png)
+![Weather Service Consuming Jobs from Cronjob](https://imgur.com/jmNlt1N.png)
 ## Development Flow
 
 ```sh
 # YOU MUST DO THIS BEFORE ANYTHING ELSE
 # AND YOU MUST DO IT IN EACH TERMINAL YOU
 # WANT TO RUN IT IN
-eval $(minikube -p minikube docker-env)
+eval $(minikube docker-env)
 
 ./scripts/update-local
 
@@ -97,7 +97,7 @@ eval $(minikube -p minikube docker-env)
 # YOU MUST DO THIS BEFORE ANYTHING ELSE
 # AND YOU MUST DO IT IN EACH TERMINAL YOU
 # WANT TO RUN IT IN
-eval $(minikube -p minikube docker-env)
+eval $(minikube docker-env)
 
 # Build, Tag, and Update Minikube
 ./scripts/update-local

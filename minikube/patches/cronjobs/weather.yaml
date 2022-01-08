@@ -8,15 +8,15 @@ spec:
       template:
         spec:
           containers:
-          - name: weather
-            imagePullPolicy: Never
-            image: microservice-monorepo-cronjobs-weather
-            env:
-              - name: WEATHER_API_KEY
-                value: a705cc8c6241451d8db141229220801
-              - name: WEATHER_API_URL
-                value: https://api.weatherapi.com/v1
-              - name: MQ_URL
-                value: guest:guest@$(RABBITMQ_SERVICE_HOST):$(RABBITMQ_SERVICE_PORT)
-              - name: MQ_EXCHANGE
-                value: sensor-data
+            - name: weather
+              imagePullPolicy: Never
+              image: koios-cronjobs-weather
+              env:
+                - name: WEATHER_API_KEY
+                  value: a705cc8c6241451d8db141229220801
+                - name: WEATHER_API_URL
+                  value: https://api.weatherapi.com/v1
+                - name: MQ_URL
+                  value: guest:guest@$(RABBITMQ_SERVICE_HOST):$(RABBITMQ_SERVICE_PORT)
+                - name: MQ_EXCHANGE
+                  value: sensor-data

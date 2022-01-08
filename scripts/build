@@ -1,5 +1,5 @@
 #!/bin/sh
 
-eval $(minikube -p minikube docker-env)
+eval $(minikube docker-env)
 
 docker build -t koios-$1-$2 ./$1/$2

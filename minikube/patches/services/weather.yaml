@@ -11,3 +11,28 @@ spec:
       - image: koios-services-weather
         name: services-weather
         imagePullPolicy: Never
+        env:
+          - name: ENVIRONMENT
+            value: development
+          - name: JWT_SECRET_TOKEN
+            value: "some secret value"
+          - name: DB_HOST
+            value: mongo
+          - name: DB_PORT
+            value: "27017"
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: mongo-root-username
+          - name: DB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: mongo-root-password
+          - name: DB_NAME
+            value: /test
+          - name: MQ_URL
+            value: guest:guest@$(RABBITMQ_SERVICE_HOST):$(RABBITMQ_SERVICE_PORT)
+          - name: MQ_EXCHANGE
+            value: sensor-data

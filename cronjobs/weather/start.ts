@@ -3,11 +3,8 @@ import * as API from './api'
 import * as Publish from './publish'
 
 const main = async () => {
-  await Publish.starting()
-  const weather = await API.getCurrentWeather()
-  Log.trace({ weather })
-  await Publish.currentWeather(weather as any)
-  await Publish.finished()
+  await Publish.currentWeather(await API.getCurrentWeather() as any)
+  await new Promise(res => setTimeout(res, 2000))
 }
 
 main()

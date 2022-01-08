@@ -9,7 +9,11 @@ const main = async () => {
   Log.trace("Going to try to subscribe to the sensor data");
 
   processSensorDataUpdates(({ data }: any) => {
-    Log.debug({ data }, "Got something!");
+    if (data.type === "weather.data.current") {
+      Log.debug({ data }, "Current Weather");
+    } else {
+      Log.debug({ data }, "Sensor Lifecycle");
+    }
   });
 };
 

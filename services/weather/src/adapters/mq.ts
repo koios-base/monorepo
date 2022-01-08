@@ -5,4 +5,4 @@ export const connection = haredo({
 });
 
 export const processSensorDataUpdates = (cb: any) =>
-  connection.queue(q(process.env.MQ_EXCHANGE!)).prefetch(1).subscribe(cb);
+  connection.queue(q(process.env.MQ_EXCHANGE!)).prefetch(2).subscribe(cb);

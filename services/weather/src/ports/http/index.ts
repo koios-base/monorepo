@@ -27,8 +27,6 @@ export const init = (ctx: PortCTX<PortType>) => {
 
   ctx.data
     .get("/.well-known/healthcheck", Routes.healthcheck)
-    .post("/database/migrate", Routes.db.migrate)
-    .post("/database/rollback", Routes.db.rollback)
     .get("/jokes", Routes.getRandomJoke)
     .use(Middleware.HTTP.error());
 };

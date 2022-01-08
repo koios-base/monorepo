@@ -13,8 +13,22 @@ service WeatherAPI {
       body : "*"
     };
   };
+
+  rpc GetCurrentWeather(GetCurrentWeatherRequest)
+      returns (GetCurrentWeatherResponse) {
+    option (google.api.http) = {
+      get : '/current'
+    };
+  };
 }
 
 message SayHelloRequest { string name = 1; }
 
 message SayHelloResponse { string response = 1; }
+
+message GetCurrentWeatherRequest {}
+
+message GetCurrentWeatherResponse {
+  double f = 1;
+  double c = 2;
+}

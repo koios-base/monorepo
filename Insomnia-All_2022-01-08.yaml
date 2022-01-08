@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-01-08T21:17:39.094Z
+__export_date: 2022-01-08T21:23:53.092Z
 __export_source: insomnia.desktop.app:v2021.7.2
 resources:
   - _id: req_29cbb8bd00874660a9e20630a4d74123
@@ -42,65 +42,9 @@ resources:
     description: ""
     scope: collection
     _type: workspace
-  - _id: req_8ff228adbfbc4a9f9c05899019cab983
-    parentId: fld_276f56f9d644452caabf2457d917f8a1
-    modified: 1641650186812
-    created: 1641649708518
-    url: "{{ _.url }}/database/migrate"
-    name: Migrate
-    description: ""
-    method: POST
-    body: {}
-    parameters: []
-    headers: []
-    authentication:
-      type: bearer
-      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlzX292ZXJsb3JkIjp0cnVlfX0.jfrv9gauIEVg-eTZGnZUhCfbsxzKRiz-Es_2Vv_9Ozc
-    metaSortKey: -1641649708518
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_276f56f9d644452caabf2457d917f8a1
-    parentId: wrk_f31c9bd0b74042459904e6a06f7bac3b
-    modified: 1641649702881
-    created: 1641649702881
-    name: Database
-    description: ""
-    environment: {}
-    environmentPropertyOrder: null
-    metaSortKey: -1641649702881
-    _type: request_group
-  - _id: req_c6e2a74358a345b683339829dd3825d6
-    parentId: fld_276f56f9d644452caabf2457d917f8a1
-    modified: 1641650196929
-    created: 1641650194124
-    url: "{{ _.url }}/database/rollback"
-    name: Rollback
-    description: ""
-    method: POST
-    body: {}
-    parameters: []
-    headers: []
-    authentication:
-      type: bearer
-      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlzX292ZXJsb3JkIjp0cnVlfX0.jfrv9gauIEVg-eTZGnZUhCfbsxzKRiz-Es_2Vv_9Ozc
-    metaSortKey: -1641649665987
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_ede9844997e3470797aa7026c2b6df00
     parentId: fld_1d80edf752ef4b16ba817e752482cada
-    modified: 1641676629587
+    modified: 1641677017745
     created: 1641676616913
     url: "{{ _.url }}/hello"
     name: Hello

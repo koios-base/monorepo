@@ -8,11 +8,11 @@ export const secrets = {
 };
 
 export const database = {
-  user: env.string("DB_USER"),
-  password: env.string("DB_PASS"),
-  host: env.string("DB_HOST"),
-  port: env.int("DB_PORT"),
-  database: env.string("DB_NAME"),
+  // user: env.string("DB_USER"),
+  // password: env.string("DB_PASS"),
+  // host: env.string("DB_HOST"),
+  // port: env.int("DB_PORT"),
+  // database: env.string("DB_NAME"),
 };
 
 export const cache = {

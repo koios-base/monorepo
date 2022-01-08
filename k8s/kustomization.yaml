@@ -5,6 +5,5 @@ resources:
   - ./jaeger
   - ./cronjobs
   - ./mq
-  - ./sql
   - ./mongo
   - ./weather

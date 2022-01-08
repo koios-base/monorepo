@@ -31,6 +31,10 @@ export const newInstance = async (httpPortCtx: PortCTX<HTTPPortType>) => {
         response: `Hello ${name}!`,
       };
     },
+    GetCurrentWeather: async () => ({
+      f: 69.0,
+      c: 420.0,
+    }),
   });
 
   const gateway = createGateway();

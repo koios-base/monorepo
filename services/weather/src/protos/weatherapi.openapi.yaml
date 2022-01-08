@@ -22,6 +22,18 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SayHelloResponse"
+  /current:
+    get:
+      summary: ""
+      operationId: WeatherAPI_GetCurrentWeather
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetCurrentWeatherResponse"
 components:
   schemas:
     SayHelloRequest:
@@ -34,5 +46,17 @@ components:
       properties:
         response:
           type: string
+          description: ""
+      description: ""
+    GetCurrentWeatherRequest:
+      properties: {}
+      description: ""
+    GetCurrentWeatherResponse:
+      properties:
+        f:
+          type: number
+          description: ""
+        c:
+          type: number
           description: ""
       description: ""

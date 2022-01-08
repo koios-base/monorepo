@@ -24,3 +24,14 @@ eval $(minikube -p minikube docker-env)
 # Builds everything locally for docker
 ./scripts/build-all
 ```
+
+## Interfaces
+
+> This is assuming you have set up /etc/hosts to point
+> at the correct ingress urls
+> 
+> ex:
+>
+> 192.168.49.2 weather.local-demo
+
+_**services/weather**_: http://weather.local-demo

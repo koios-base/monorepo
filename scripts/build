@@ -1,3 +1,5 @@
 #!/bin/sh
 
-docker build -t microservice-monorepo-$1-$2 ./$1/$2
+eval $(minikube -p minikube docker-env)
+
+docker build -t koios-$1-$2 ./$1/$2

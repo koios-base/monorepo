@@ -16,12 +16,33 @@ This holds all of the services, cron, and async systems that make up Koios
 
 ```sh
 git clone <repo link>
+
 cd koios
+
 minikube start
+
+# YOU MUST DO THIS BEFORE ANYTHING ELSE
+# AND YOU MUST DO IT IN EACH TERMINAL YOU
+# WANT TO RUN IT IN
+eval $(minikube -p minikube docker-env)
+
+# Add the ingress addon
+minikube addons enable ingress
+# Add the ability to track CPU and Memory
+minikube addons enable metrics-server
+
+# the first time we run this, it will be slow
+# that's ok. It gets faster
 ./scripts/update-local
 
-# Edit /etc/hosts
+
+
+# Edit /etc/hosts in order to get your browser
+# and other tooling working locally with the
+# ingress
 <minikube ip> weather.local-demo
+# each new service you add, update this
+# along with the ingress.yaml
 ```
 
 ## Services

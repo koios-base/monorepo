@@ -8,6 +8,6 @@ spec:
   template:
     spec:
       containers:
-      - image: microservice-monorepo-services-weather
+      - image: koios-services-weather
         name: services-weather
         imagePullPolicy: Never

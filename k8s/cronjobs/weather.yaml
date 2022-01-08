@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: weather
-            image: microservice-monorepo-cronjobs-weather
+            image: koios-cronjobs-weather
             env:
               - name: WEATHER_API_KEY
                 value: a705cc8c6241451d8db141229220801

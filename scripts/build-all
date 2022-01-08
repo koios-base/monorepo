@@ -2,11 +2,12 @@
 
 set -e;
 
-SYSTEMS=("cronjobs" "services")
+echo "Building Cronjobs"
+./scripts/build-cronjobs
+echo "$SYSTEM cronjobs"
+echo ""
 
-for SYSTEM in $SYSTEMS; do
-  echo "Building $SYSTEM"
-  ./scripts/build-$SYSTEM
-  echo "$SYSTEM built"
-  echo ""
-done
+echo "Building Services"
+./scripts/build-services
+echo "$SYSTEM services"
+echo ""

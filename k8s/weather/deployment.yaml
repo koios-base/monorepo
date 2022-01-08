@@ -20,7 +20,7 @@ spec:
         name: weather
     spec:
       containers:
-      - image: microservice-monorepo-services-weather
+      - image: koios-services-weather
         name: services-weather
         env:
           - name: ENVIRONMENT

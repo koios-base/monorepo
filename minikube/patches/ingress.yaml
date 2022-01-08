@@ -14,3 +14,4 @@ spec:
             name: weather
             port:
               number: 3000
+

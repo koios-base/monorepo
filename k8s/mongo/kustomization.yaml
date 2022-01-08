@@ -1,0 +1,5 @@
+resources:
+  - ./service.yaml
+  - ./stateful-set.yaml
+  - ./secrets.yaml
+  - ./admin.yaml

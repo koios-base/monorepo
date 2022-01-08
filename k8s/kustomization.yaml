@@ -6,4 +6,5 @@ resources:
   - ./cronjobs
   - ./mq
   - ./sql
+  - ./mongo
   - ./weather

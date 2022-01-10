@@ -8,7 +8,7 @@ const log = Log.child({
   port: "twirp",
 });
 
-interface PortCTX<T> {
+export interface PortCTX<T> {
   data?: T;
   assign: (v: T) => void;
 }

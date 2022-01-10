@@ -1,16 +1,24 @@
 import Log from "@app/monitoring/log";
-import * as Env from "@app/config/env";
-import * as HTTPPort from "@app/ports/http";
-import * as TwirpPort from "@app/ports/twirp";
+import * as Adapters from "@app/adapters";
+import * as Ports from "@app/ports";
+import WeatherModel from "@app/models/weather";
+
 import { processSensorDataUpdates } from "@app/adapters/mq";
 
 const main = async () => {
-  await TwirpPort.newInstance(await HTTPPort.newInstance(Env.port));
+  Log.trace("Connecting the adapters");
+  await Adapters.init();
+  Log.trace("Adapters connected");
+  Log.trace("Connecting the Ports");
+  await Ports.init();
+
   Log.trace("Going to try to subscribe to the sensor data");
 
-  processSensorDataUpdates(({ data }: any) => {
+  processSensorDataUpdates(async ({ data }: any) => {
     if (data.type === "weather.data.current") {
       Log.debug({ data }, "Current Weather");
+      const saved = await WeatherModel.create(data);
+      Log.debug({ saved }, "Created In the Database");
     } else {
       Log.debug({ data }, "Sensor Lifecycle");
     }

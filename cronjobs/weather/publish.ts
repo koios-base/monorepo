@@ -7,7 +7,7 @@ export const connection = haredo({
 export const emit = (data: {[x: string]: unknown}) => connection.queue(process.env.MQ_EXCHANGE!).publish(data)
 
 export const currentWeather = (payload: any) => emit({
-  type: 'weather.lifecycle.current',
+  type: 'weather.data.current',
   payload,
   timestamp: new Date().toISOString()
 })

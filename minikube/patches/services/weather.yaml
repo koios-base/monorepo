@@ -31,7 +31,7 @@ spec:
                 name: mongodb-secret
                 key: mongo-root-password
           - name: DB_NAME
-            value: /test
+            value: test
           - name: MQ_URL
             value: guest:guest@$(RABBITMQ_SERVICE_HOST):$(RABBITMQ_SERVICE_PORT)
           - name: MQ_EXCHANGE

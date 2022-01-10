@@ -70,6 +70,15 @@ The **Weather** service is responsible for keeping track of the weather througho
 the day and recording it. It is also responsible for answering queries about the
 current weather and some queries about historical weather.
 
+- Jobs are deleted after 100s
+![](https://i.ibb.co/xjk33kz/Peek-2022-01-10-14-24.gif)
+
+- Jobs are spun up ever ~60s
+![](https://i.ibb.co/0D2cnhX/Peek-2022-01-10-14-25.gif)
+
+- Weather Data is stored in MongoDB
+![](https://i.imgur.com/1uaHwCx.png)
+
 ## K9s Dashboard
 
 ![Pods](https://imgur.com/n6vJZW7.png)
